@@ -1,0 +1,22 @@
+name: CI/CD Pipeline
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        users: actions/checkout@v2
+
+      - name: Setup Node.js
+        users: actions/setup-node@v3
+        with:
+          node-version: '14'
+        
+      - name: Build and Run
+        run: make build-agent
