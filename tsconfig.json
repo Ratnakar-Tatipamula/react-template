@@ -22,7 +22,7 @@
   },
   "include": [
     ".eslintrc.cjs",
-    "src",
+    "src", "jest.config.ts",
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
