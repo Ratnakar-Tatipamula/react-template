@@ -3,7 +3,7 @@ build-agent:
 	# docker rm -f react-template || true
 
 	# build docker image
-	docker build -t react-template
+	docker build -t react-template .
 
 	# lint the code
 	docker run react-template npm run lint
