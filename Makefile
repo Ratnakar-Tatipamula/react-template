@@ -1,4 +1,4 @@
-buid-agent:
+build-agent:
 	# clean previous container
 	docker rm -f react-template || true
 
