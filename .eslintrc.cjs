@@ -10,6 +10,8 @@ module.exports = {
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    // 'react-app',      // Add this
+    // 'react-app/jest'  // Add this
   ],
   overrides: [
     {
