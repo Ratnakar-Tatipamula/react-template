@@ -6,17 +6,16 @@ build-agent:
 	docker build -t react-template .
 
 	# lint the code
-	docker run react-template npm run lint
+	docker run --rm --name='react-template' react-template npm run lint
 
 	# run tests with coverage
-	docker run react-template npm run coverage
+	docker run --name='react-template' react-template npm run coverage
 
 	# copy test results
-	docker cp react-template:/path/to/test-results ./test-results
+	docker cp react-template:/code/test-results .
 
 	# copy code coverage
-	docker cp react-template:/path/to/code-coverage ./code-coverage
+	docker cp react-template:/code/coverage .
 
-# build-agent:
-# 	docker build -t react-template .
-# 	docker run -p 8080:80 react-template
+	# clean up container
+	docker rm react-template
